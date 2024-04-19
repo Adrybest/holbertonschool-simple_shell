@@ -1,1 +1,22 @@
-man of simple shell
+.TH man 1 "19 april 2024" "1.0" "simple shell man page"
+
+.SH NAME
+simple_shell
+
+.SH SYNOPSIS
+#include shell.h
+
+.SH DESCRIPTION
+Simple Shell is a project where we need to understand and build a functional simple shell program.
+
+.SH OPTION
+
+
+.SH EXEMPLE
+
+
+.SH RETURN VALUE
+
+
+.SH AUTHOR
+By Adryan and Jean-alexandre
