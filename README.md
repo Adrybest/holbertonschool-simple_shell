@@ -6,7 +6,7 @@ This is a simple UNIX command line interpreter developed as part of the curricul
 
 ## Command of compilation
 
-The command to compil the program :
+**The command to compil the program :**
 
 ~~~
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -77,5 +77,7 @@ $
 
 ## Authors
 
-[@Adryan](https://www.github.com/Adrybest)\
+[@Adryan](https://www.github.com/Adrybest) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+\
 [@Jean-alexandre](https://www.github.com/omega-jean)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jean-alexandre-roger-4541172b5/)
