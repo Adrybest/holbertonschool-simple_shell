@@ -16,18 +16,6 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 
-/*global variable*/
-extern char **environ;
-
-
-/*main*/
-ssize_t getline(char **restrict lineptr, size_t *restrict n, FILE *restrict stream);
-
-/*environement variable*/
-char *_getenv(const char *name);
-int _setenv(const char *name, const char *value, int overwrite);
-
-/*function that deletes the variable name from the environment*/
-int _unsetenv(const char *name);
+void prompt(void);
 
 #endif

@@ -42,6 +42,19 @@ $ exit
 $
 ~~~
 
+<<<<<<< HEAD
+=======
+## PATH
+
+A PATH is an environment variable that tells the system where to find executable programs when you type a command in the terminal or command prompt.
+
+**Exemple**
+
+~~~
+
+~~~
+
+>>>>>>> main
 ## List of allowed functions and system use
 
     access (man 2 access)
@@ -77,7 +90,14 @@ $
 
 ## Authors
 
+<<<<<<< HEAD
 [@Adryan](https://www.github.com/Adrybest)\
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adryan-bestard-973090305/)
 [@Jean-alexandre](https://www.github.com/omega-jean)\
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jean-alexandre-roger-4541172b5/)
+=======
+
+| [@Adryan](https://www.github.com/Adrybest)|  [@Jean-alexandre](https://www.github.com/omega-jean) |
+| :-------- | :------- |
+| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jean-alexandre-roger-4541172b5/) |
+>>>>>>> main
