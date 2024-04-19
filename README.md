@@ -20,7 +20,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 ## File Descriptions
 
-• shell.c: Main source file containing the logic for the simple shell.
+~@ main.c: Main source file containing the logic for the simple shell.
 
 • shell.h: Header file containing function prototypes and macros.
 
