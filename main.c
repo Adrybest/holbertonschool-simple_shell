@@ -11,6 +11,7 @@ int main(void)
 		command = _getline();
 		if (command == NULL)
 		{
+			printf("\n");
 			break;
 		}
 
