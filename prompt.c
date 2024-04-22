@@ -4,6 +4,5 @@
 */
 void prompt(void)
 {
-	/*Print "$ " to indicate prompt*/
-	printf("$ ");
+	write(STDOUT_FILENO, "$ ", 2);
 }
