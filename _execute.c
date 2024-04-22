@@ -8,7 +8,7 @@
 int _execute(char *command)
 {
         int chld;
-	char *args[] = {command, NULL};
+	char *args[] = {"/bin/ls", NULL};
 	pid_t pid = fork();
 
                 if (pid == -1)
@@ -18,10 +18,18 @@ int _execute(char *command)
                 }
                 if (pid == 0)
 		{
-			if (execve(command, args, NULL) == -1)
+			if (strcmp(command, "ls") == 0)
 			{
-                        	perror("./hsh");
-                        	exit(EXIT_FAILURE);
+				if (execve("/bin/ls", args, NULL) == -1)
+				{
+                        		perror("./hsh");
+                        		exit(EXIT_FAILURE);
+				}
+			}
+			else
+			{
+				printf("./hsh 1: %s: command not found\n", command);
+            			exit(EXIT_FAILURE);
 			}
                 }
                 else
