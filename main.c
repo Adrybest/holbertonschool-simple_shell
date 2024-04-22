@@ -1,38 +1,40 @@
 #include "shell.h"
+
 /**
- * main - main
- * Return: 0
+ * main - ...
+ *
+ * Return: Always 0.
 */
+
 int main(void)
 {
-	const int max_lenght = 100;
-	char line[max_lenght];
+	const int max_length = 100;
+	char line[max_length];
 	int chld;
+	char *argv[] = {"/bin/sh", "-c", line, NULL};
 
 	while (1)
 	{
 		prompt();
-		/*fgets = foef*/
-		/*reads the next char from stream and returns it as an char to an int*/
-		if (fgets(line, max_lenght, stdin) == NULL)/*Read user command*/
+
+		if (fgets(line, max_length, stdin) == NULL)
 		{
-			/*Manage end of file (Ctrl+D)*/
 			printf("\n");
 			break;
 		}
-		/*Delete new line character at end of command*/
+
 		line[strcspn(line, "\n")] = '\0';
+
 		pid_t pid = fork();
 
 		if (pid == -1)
 		{
-			perror("fork error");/*creation failed*/
+			perror("./hsh");
 			exit(EXIT_FAILURE);
 		}
 		else if (pid == 0)
 		{
-			/*execpl: searches for the executable file specified by "line"*/
-			if (execlp(line, line, NULL) == -1)/*Run the command*/
+			if (execve(argv[0], argv, NULL) == -1)
 			{
 				perror("./hsh");
 				exit(EXIT_FAILURE);
@@ -40,8 +42,9 @@ int main(void)
 		}
 		else
 		{
-			waitpid(pid, &chld, 0);/*Wait for the child process to finish*/
+			waitpid(pid, &chld, 0);
 		}
 	}
+
 	return (0);
 }
