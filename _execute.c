@@ -18,7 +18,7 @@ int _execute(char *command)
                 }
                 if (pid == 0)
 		{
-			if (strcmp(command, "ls") == 0)
+			if (strcmp(command, "/bin/ls") == 0)
 			{
 				if (execve("/bin/ls", args, NULL) == -1)
 				{
@@ -38,3 +38,4 @@ int _execute(char *command)
                 }
         return (0);
 }
+
