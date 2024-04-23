@@ -18,7 +18,7 @@
 
 void prompt(void);
 int _execute(char *command);
-char _getline(void);
+char *_getline(void);
 char _strtok(char *line);
 
 #endif
