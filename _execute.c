@@ -8,27 +8,28 @@
 int _execute(char *command)
 {
 	int chld;
-	char *args[] = {"/bin/ls", NULL};
+	char *args[] = {NULL,  NULL};
 	pid_t pid = fork();
 
 	if (pid == -1)
 	{
 		perror("fork error");/*creation failed*/
-		exit(EXIT_FAILURE);
+		exit(1);
 	}
 	if (pid == 0)
 	{
-		if (strcmp(command, "/bin/ls") == 0)
+		args[0] = command;
+		args[1] = NULL;
+		if (strcmp(command, args[0]) == 0)
 		{
-			if (execve("/bin/ls", args, NULL) == -1)
+			if (execve(args[0], args, NULL) == -1)
 			{
 				perror("./hsh");
-				exit(EXIT_FAILURE);
+				exit(1);
 			}
 		}
 		else
 		{
-			printf("./hsh 1: %s: command not found\n", command);
 			exit(1);
 		}
 	}
@@ -38,4 +39,3 @@ int _execute(char *command)
 	}
 	return (0);
 }
-
