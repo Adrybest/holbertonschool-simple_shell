@@ -18,9 +18,9 @@ int _execute(char *command)
 	}
 	if (pid == 0)
 	{
-		args[0] = command;
-		args[1] = NULL;
-		if (strcmp(command, args[0]) == 0)
+		args[0] = command;/*args[0] stock the command from execve*/
+		args[1] = NULL;/*args[1] stock the NULL argument from the end of execve*/
+		if (strcmp(command, args[0]) == 0)/*compare the command and the user value*/
 		{
 			if (execve(args[0], args, NULL) == -1)
 			{
