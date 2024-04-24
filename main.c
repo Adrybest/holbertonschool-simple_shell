@@ -16,6 +16,7 @@ int main(void)
 		line = _getline();
 		if (line == NULL)
 		{
+
 			break;
 		}
 
