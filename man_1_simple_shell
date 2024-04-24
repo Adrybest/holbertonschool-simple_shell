@@ -1,22 +1,22 @@
-.TH man 1 "19 april 2024" "1.0" "simple shell man page"
+MAN(Simple_shell)			General Commands Manuel	 		MAN(Simple_shell)
 
-.SH NAME
-simple_shell
+NAME
+		simple_shell
 
-.SH SYNOPSIS
-#include shell.h
+SYNOPSIS
+		$ ./hsh [option] [file]
 
-.SH DESCRIPTION
-Simple Shell is a project where we need to understand and build a functional simple shell program.
+DESCRIPTION
+		Simple Shell is a project where we need to understand and build a functional simple shell program.
 
-.SH OPTION
+RETURN VALUE
+		Always returns the status of the previously executed command.
 
+PATH
+		Looks in PATH env variable for executable program file location.
 
-.SH EXEMPLE
+BUGS
+		Not found.
 
-
-.SH RETURN VALUE
-
-
-.SH AUTHOR
-By Adryan and Jean-alexandre
+AUTHOR
+		Adryan and Jean-alexandre
