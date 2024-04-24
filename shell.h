@@ -16,6 +16,9 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 
+/*macro*/
+#define length 100/*define the max length for argument array*/
+
 void prompt(void);
 int _execute(char *command);
 char *_getline(void);
