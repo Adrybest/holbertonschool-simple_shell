@@ -8,7 +8,9 @@
 int _execute(char *command)
 {
 	int chld;
-	char *args[] = {NULL,  NULL};
+	char *args[length];
+	int count = 0;
+	char *token = strtok(NULL, " ");
 	pid_t pid = fork();
 
 	if (pid == -1)
@@ -18,15 +20,16 @@ int _execute(char *command)
 	}
 	if (pid == 0)
 	{
-		args[0] = command;/*args[0] stock the command from execve*/
-		args[1] = NULL;/*args[1] stock the NULL argument from the end of execve*/
-		if (strcmp(command, args[0]) == 0)/*compare the command and the user value*/
+	args[count++] = command;
+	while (token != NULL && count < length - 1)/*(- 1) = place for NULL char*/
+	{
+		args[count++] = token;/*add token argument at the line readed*/
+	}
+	args[count] = NULL;/*to finish the array by the NULL argument*/
+		if (execve(args[0], args, NULL) == -1)/*execute the command*/
 		{
-			if (execve(args[0], args, NULL) == -1)
-			{
-				perror("./hsh");
-				exit(1);
-			}
+			perror("./hsh");
+			exit(1);
 		}
 		else
 		{
@@ -35,7 +38,7 @@ int _execute(char *command)
 	}
 	else
 	{
-		waitpid(pid, &chld, 0);/*Wait for the child process to finish*/
+		wait(&chld);/*Wait for the child process to finish*/
 	}
 	return (0);
 }
