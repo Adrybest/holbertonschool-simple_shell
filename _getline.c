@@ -4,17 +4,12 @@
  * Return: the line.
 */
 
-char _getline(void)
+char *_getline(void)
 {
 	char *line = NULL;
 	size_t size = 0;
 	ssize_t read_line;
 
-	/*checks if the standard input is connected to a terminal */
-	if (isatty(STDIN_FILENO))
-	{
-		prompt();/*if its good, display the prompt*/
-	}
 
 	read_line = getline(&line, &size, stdin);/*read input data of line & size*/
 
@@ -22,6 +17,11 @@ char _getline(void)
 	{
 		free(line);
 		return (0);
+	}
+
+	if (line[read_line - 1] == '\n')
+	{
+		line[read_line - 1] = '\0';
 	}
 	return (line);
 }
