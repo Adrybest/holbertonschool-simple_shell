@@ -22,7 +22,7 @@ int main(void)
 			}
 			else
 			{
-				exit(1);
+				exit(0);
 			}
 			break;
 		}
