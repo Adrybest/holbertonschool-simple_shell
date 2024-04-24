@@ -16,6 +16,14 @@ int main(void)
 		line = _getline();
 		if (line == NULL)
 		{
+			if (feof(stdin))
+			{
+				printf("\n");
+			}
+			else
+			{
+				exit(1);
+			}
 			break;
 		}
 
