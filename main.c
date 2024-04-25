@@ -16,15 +16,15 @@ int main(void)
 		line = _getline();
 		if (line == NULL)
 		{
-			printf("\n");
 			break;
 		}
 
-		command = strtok(line, " \n");
+		command = strtok(line, " ");
 		if (command != NULL)
 		{
 			_execute(command);
 		}
+
 		free(line);
 	}
 
