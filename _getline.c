@@ -19,9 +19,9 @@ char *_getline(void)
 		return (0);
 	}
 
-	if (line[read_line - 1] == '\n')
+	/*if (line[read_line - 1] == '\n')
 	{
 		line[read_line - 1] = '\0';
-	}
+	}*/
 	return (line);
 }

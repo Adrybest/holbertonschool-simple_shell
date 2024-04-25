@@ -16,11 +16,10 @@ int main(void)
 		line = _getline();
 		if (line == NULL)
 		{
-			printf("\n");
 			break;
 		}
 
-		command = strtok(line, " ");
+		command = strtok(line, " \n");
 		if (command != NULL)
 		{
 			_execute(command);
