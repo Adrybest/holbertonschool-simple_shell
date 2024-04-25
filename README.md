@@ -84,7 +84,7 @@ A PATH is an environment variable that tells the system where to find executable
     _exit (man 2 _exit)
 
 ## Flowchart
-
+![alt text](<Flowchart Simple shell-1.png>)
 ## Authors
 
 
