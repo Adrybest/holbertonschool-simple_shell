@@ -1,22 +1,45 @@
-MAN(Simple_shell)			General Commands Manuel	 		MAN(Simple_shell)
+.TH SHELL "1" "April 2024" "1.0" "shell man page"
 
-NAME
-		simple_shell
+.SH NAME
+simple shell program
 
-SYNOPSIS
-		$ ./hsh [option] [file]
+.SH SYNOPSIS
+#include "shell.h"
+void prompt(void);
+int _execute(char *command);
+char *_getline(void);
 
-DESCRIPTION
-		Simple Shell is a project where we need to understand and build a functional simple shell program.
+.SH DESCRIPTION
+The shell program is a simple shell implementation written in C. It provides a command-line interface where users can execute commands.
 
-RETURN VALUE
-		Always returns the status of the previously executed command.
+.SH OPTIONS
+This program does not accept any command-line options.
 
-PATH
-		Looks in PATH env variable for executable program file location.
+.SH COMMANDS
+The shell supports the execution of various commands available in the system. It provides basic functionality such as executing programs, changing directories, and managing processes.
 
-BUGS
-		Not found.
+For a list of available commands and their usage, please refer to the documentation of the respective commands.
 
-AUTHOR
-		Adryan and Jean-alexandre
+.SH RETURN VALUE
+The shell program returns 0 upon successful execution.
+
+.SH EXAMPLES
+To demonstrate the usage of shell with a simple command:
+
+.nf
+$ ./hsh
+$ /bin/pwd
+/holbertonschool-simple_shell
+$ /bin/ls
+$ AUTHORS   README.md   _execute.c   _getline.c  hsh  main.c   prompt.c   shell.h
+$
+.fi
+
+.SH FILES
+This program does not create or use any additional files.
+
+.SH AUTHORS
+Written by Adryan and Jean-alexandre.
+
+.SH BUGS
+No known bugs.
